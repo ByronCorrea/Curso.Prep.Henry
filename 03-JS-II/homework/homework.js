@@ -16,24 +16,24 @@ function mayoriaDeEdad(edad) {
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
   if (edad < 18) {
-    return 'Not allowed';
+    return "Not allowed";
   }
-  return 'Allowed';
+  return "Allowed";
 }
-  
+
 function conection(status) {
-  //Recibimos un estado de conexión de un usuario representado por un valor numérico. 
+  //Recibimos un estado de conexión de un usuario representado por un valor numérico.
   //Cuando el estado es igual a 1, el usuario está "Online"
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
   if (status === 1) {
-    return 'Online';
+    return "Online";
   }
   if (status === 2) {
-    return 'Away';
+    return "Away";
   }
-  return 'Offline';
+  return "Offline";
 }
 
 function saludo(idioma) {
@@ -44,17 +44,17 @@ function saludo(idioma) {
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
   switch (idioma) {
-    case 'aleman':
-      return 'Guten Tag!';
+    case "aleman":
+      return "Guten Tag!";
       break;
-    case 'mandarin':
-      return 'Ni Hao!'  
+    case "mandarin":
+      return "Ni Hao!";
       break;
-    case 'ingles':
-      return 'Hello!';
-  
+    case "ingles":
+      return "Hello!";
+
     default:
-      return 'Hola!';
+      return "Hola!";
       break;
   }
 }
@@ -68,25 +68,24 @@ function colors(color) {
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
   switch (color) {
-    case 'blue':
-      return 'This is blue'
+    case "blue":
+      return "This is blue";
       break;
 
-    case 'red':
-      return 'This is red'
+    case "red":
+      return "This is red";
       break;
 
-    case 'green':
-      return 'This is green'
+    case "green":
+      return "This is green";
       break;
 
-    case 'orange':
-      return 'This is orange'
+    case "orange":
+      return "This is orange";
       break;
-    
-  
+
     default:
-      return 'Color not found'
+      return "Color not found";
       break;
   }
 }
@@ -123,31 +122,31 @@ function fizzBuzz(numero) {
   // De lo contrario, devuelve el numero
   // Tu código:
   if (numero % 3 === 0 && numero % 5 === 0) {
-    return 'fizzbuzz';
+    return "fizzbuzz";
   } else if (numero % 3 === 0) {
-    return 'fizz'
-  } else if (numero % 5 === 0){
-    return 'buzz'
+    return "fizz";
+  } else if (numero % 5 === 0) {
+    return "buzz";
   }
   return numero;
 }
 
 function operadoresLogicos(num1, num2, num3) {
-  //La función recibe tres números distintos. 
+  //La función recibe tres números distintos.
   //Si num1 es mayor a num2 y a num3 y además es positivo, retornar ---> "Número 1 es mayor y positivo"
   //Si alguno de los tres números es negativo, retornar ---> "Hay negativos"
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
-  //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
+  //Si no se cumplen ninguna de las condiciones anteriores, retornar false.
   // Tu código:
   if (num1 === 0 || num2 === 0 || num3 === 0) {
-    return 'Error';
+    return "Error";
   }
   if (num1 < 0 || num2 < 0 || num3 < 0) {
-    return 'Hay negativos'
+    return "Hay negativos";
   }
   if (num1 > num2 && num1 > num3 && num1 > 0) {
-    return 'Número 1 es mayor y positivo';
+    return "Número 1 es mayor y positivo";
   }
   if (num3 > num1 && num3 > num2) {
     return num3 + 1;
@@ -173,25 +172,25 @@ function esPrimo(numero) {
   return true;
 }
 
-function esVerdadero(valor){
-  //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
+function esVerdadero(valor) {
+  //Escribe una función que reciba un valor booleano y retorne “Soy verdadero”
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-  return valor === true ? 'Soy verdadero' : 'Soy falso';
+  return valor === true ? "Soy verdadero" : "Soy falso";
 }
 
-function tablaDelSeis(){
+function tablaDelSeis() {
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí: 
-  let resultados = [];  
+  //Escribe tu código aquí:
+  let resultados = [];
   for (let i = 0; i <= 10; i++) {
     resultados.push(6 * i);
   }
   return resultados;
 }
 
-function tieneTresDigitos(numero){
+function tieneTresDigitos(numero) {
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí:
   const numStr = numero.toString();
@@ -209,7 +208,6 @@ function doWhile(numero) {
   } while (contador < 8);
   return numero;
 }
-
 
 // No modificar nada debajo de esta línea
 // --------------------------------
@@ -229,5 +227,5 @@ module.exports = {
   esVerdadero,
   tablaDelSeis,
   tieneTresDigitos,
-  doWhile
+  doWhile,
 };
